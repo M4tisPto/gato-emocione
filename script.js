@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
         enojado: [
             "aweonao", "weon", "tarado", "pendejo", "baboso", "bobo", "idiota",
-            "tonto", "weko", "puto", "tonoto", "tonto polla"
+            "tonto", "weko", "puto", "tonoto", "tonto polla", "saco wea"
         ],
         weird: [
             "skibidi", "sigma", "pomni", "toilet", "pollo", "papas", "causa",
@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     heading.textContent = "gracias causa 👍";
                     playNewAudio("cat-happy.mp3");
                     list.style.display = "block";
+                    currentAudio.currentTime = 0.5;
                     updateWordList(moods.feliz);
                     break;
 
@@ -71,13 +72,17 @@ document.addEventListener("DOMContentLoaded", function () {
                     heading.textContent = "A tons chinga tu madre también";
                     playNewAudio("vine-boom.mp3");
                     list.style.display = "block";
+                    currentAudio.currentTime = 0.23; 
+                    Audio.volume = 2;
                     updateWordList(moods.enojado);
                     break;
 
                 case "weird":
                     image.src = "huh.jpg";
                     heading.textContent = "watafak uste que tu habla causa";
-                    playNewAudio(""); // puedes poner un audio raro aquí si quieres
+                    playNewAudio("huh.mp3");
+                    Audio.volume = 2;
+                    currentAudio.currentTime = 0.5; 
                     list.style.display = "block";
                     updateWordList(moods.weird);
                     break;
@@ -86,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     image.src = "Screenshot_63.png";
                     heading.textContent = "escribele algo para cambiar su humor! :D";
                     playNewAudio("cat-neutral.mp3");
-                    list.style.display = "none"; // Ocultar lista
+                    list.style.display = "none";
                     break;
             }
         }
